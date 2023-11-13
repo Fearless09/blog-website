@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { MyContext } from '../api/MyContext'
 import { LiaSignOutAltSolid } from 'react-icons/lia'
+import Image from 'next/image'
 
 function NavUser() {
     const { userAccount, logOut } = useContext(MyContext)
@@ -12,9 +13,11 @@ function NavUser() {
                 className='hidden md:flex items-center gap-2'
                 onClick={() => setShowSignOut(!showSignOut)}
             >
-                <img
+                <Image
                     src={userAccount?.providerData[0].photoURL || '/demoUser.png'}
                     alt={userAccount?.providerData[0].displayName}
+                    width={500}
+                    height={500}
                     className='w-10 aspect-square rounded'
                 />
                 <h4 className='font-bold'>{userAccount?.providerData[0].displayName?.split(" ")[0]}</h4>

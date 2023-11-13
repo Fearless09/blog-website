@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { AiOutlineRight } from 'react-icons/ai'
@@ -10,7 +11,14 @@ function ShowCase({ data, text }) {
         <div className='mt-20 pb-20 border-b border-[#29394E]'>
             <h1 className='text-center font-bold text-5xl leading-normal'>Welcome to our {text} page</h1>
             <div className="mt-5">
-                <img src={image} className='w-full' alt={title} />
+                <Image
+                    src={image}
+                    width={500}
+                    height={500}
+                    sizes='860px'
+                    className='w-full'
+                    alt={title}
+                />
             </div>
             <div className='lg:w-3/4 xl:w-2/3'>
                 <h2 className='text-3xl leading-normal mt-5'>{title}</h2>

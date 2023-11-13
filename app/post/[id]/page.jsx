@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation'
 import { blogdata } from '@/app/api/blogdata'
 import { FaUser } from 'react-icons/fa'
 import MainLayout from '@/app/components/MainLayout'
+import Image from 'next/image'
 
 function Page() {
     const params = useParams()
@@ -16,7 +17,16 @@ function Page() {
         <MainLayout>
             <div className="sm:mt-16">
                 <h2 className='text-3xl leading-normal mb-5 text-center font-bold'>{title}</h2>
-                <img src={image} className='w-full' alt={title} />
+                <Image
+                    src={image}
+                    className='w-full'
+                    sizes="860px"
+                    quality={100}
+                    width={430}
+                    height={230}
+                    placeholder='empty'
+                    alt={title}
+                />
             </div>
             <div className='lg:w-3/4 xl:w-2/3'>
                 <p className='mt-3'>{content}</p>

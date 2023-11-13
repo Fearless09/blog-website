@@ -10,10 +10,10 @@ function MainShowCase() {
     return (
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 justify-between items-center gap-7">
             <div>
-                <img
+                <Image
                     src={image}
-                    width={100}
-                    height={100}
+                    width={500}
+                    height={500}
                     className="w-full"
                     alt={title}
                 />

@@ -10,6 +10,7 @@ import { MdDelete } from 'react-icons/md'
 import { AiOutlineRight } from 'react-icons/ai'
 import { toast } from 'react-toastify'
 import 'animate.css';
+import Image from 'next/image'
 
 function SideBookMark() {
     const { bookmark, setBookmark, sideBookmark, setSideBookmark } = useContext(MyContext)
@@ -41,7 +42,13 @@ function SideBookMark() {
                     {bookmark.length > 0 ? bookmark.map(({ id, image, tags, title, category, author, authorPic, published_date, reading_time, content }, index) => (
                         <div key={index} className="grid grid-cols-4 gap-3 items-start my-6 pb-6 border-b">
                             <div>
-                                <img src={image} alt="" />
+                                <Image
+                                    src={image}
+                                    width={500}
+                                    placeholder='empty'
+                                    height={500}
+                                    alt={title}
+                                />
                             </div>
                             <div className="col-span-3 flex justify-between items-center gap-3">
                                 <div>

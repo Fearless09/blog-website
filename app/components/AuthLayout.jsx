@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { MdOutlineArrowBackIosNew } from 'react-icons/md'
@@ -11,7 +12,7 @@ function AuthLayout({ children }) {
         <div className="w-screen h-screen">
             <div className="h-screen lg:grid grid-cols-2">
                 <div className='hidden lg:block'>
-                    <img src="/pexels.jpg" className='h-screen w-full object-cover' alt="" />
+                    <Image src="/pexels.jpg" alt="" className='h-screen w-full object-cover' />
                 </div>
                 <div className="overflow-x-hidden  overflow-y-auto flex flex-col relative p-4 h-full gap-4">
                     {/* Back Button Here */}

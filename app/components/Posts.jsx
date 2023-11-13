@@ -35,9 +35,13 @@ function Posts({ datas }) {
             {datas?.map(({ id, image, tags, title, category, author, authorPic, published_date, reading_time, content }, index) => (
                 <div key={index}>
                     <div className='relative'>
-                        <img
+                        <Image
                             src={image}
                             alt={title}
+                            width={500}
+                            height={500}
+                            sizes='860px'
+                            placeholder='empty'
                             className='w-full'
                         />
                         <button
