@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    transition: all 150ms linear;
+}
+
+.react-international-phone-input {
+    width: 100%;
+    border: none !important;
+    font-size: 18px !important;
+}
+
+.react-international-phone-input-container {
+    border: none !important;
+    border-bottom: 2px solid #EDEDED !important;
+    /* font-size: 18px !important; */
+    gap: 4px;
+    padding: 0.75rem 0.5rem !important;
+}
+
+.react-international-phone-flag-emoji {
+    width: 32px !important;
+    height: 32px !important;
+}
+
+.react-international-phone-country-selector-button {
+    border: none;
+}
