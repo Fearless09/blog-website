@@ -10,7 +10,7 @@ import MainLayout from '../components/MainLayout'
 
 const text = "Popular post"
 
-function page() {
+function Page() {
   const [datas, setDatas] = useState(blogdata.slice(0, pageSize))
 
   return (
@@ -25,4 +25,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

@@ -9,7 +9,7 @@ import MainLayout from '../components/MainLayout'
 
 const text = "Home"
 
-function home() {
+function Page() {
     const [datas, setDatas] = useState(blogdata.slice(0, pageSize))
 
     return (
@@ -25,4 +25,4 @@ function home() {
     )
 }
 
-export default home
+export default Page

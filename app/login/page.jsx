@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { GoogleSVG, LoadingSVG } from '../components/SvgsComponents'
 import rememberCheckbox from '../styles/loginCheckbox.module.css'
 
-function page() {
+function Page() {
     const { loginDetails, handleOnChange, googleSignIn, emailPasswordSignIn, forgotPassword, loading } = useContext(MyContext)
 
     function onsubmit(e) {
@@ -95,4 +95,4 @@ function page() {
     )
 }
 
-export default page
+export default Page

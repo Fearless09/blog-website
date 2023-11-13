@@ -75,7 +75,9 @@ function SideBookMark() {
                                 </button>
                             </div>
                         </div>
-                    )) : <p className='text-center'>You've not bookmarked any post</p>}
+                    )) : (
+                        <p className='text-center'>You've not bookmarked any post</p>
+                    )}
                 </div>
             </div>
         </div>

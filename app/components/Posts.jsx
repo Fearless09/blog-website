@@ -37,6 +37,7 @@ function Posts({ datas }) {
                     <div className='relative'>
                         <img
                             src={image}
+                            alt={title}
                             className='w-full'
                         />
                         <button

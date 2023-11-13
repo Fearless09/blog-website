@@ -9,7 +9,7 @@ import { GoogleSVG, LoadingSVG } from '../components/SvgsComponents'
 import { toast } from 'react-toastify'
 import rememberCheckbox from '../styles/loginCheckbox.module.css'
 
-function page() {
+function Page() {
     const { loginDetails, handleOnChange, googleSignIn, loading, createUser } = useContext(MyContext)
     const [details, setDetails] = useState({
         phone: '',
@@ -123,4 +123,4 @@ function page() {
     )
 }
 
-export default page
+export default Page

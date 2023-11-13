@@ -4,11 +4,9 @@ import React from 'react'
 import { useParams } from 'next/navigation'
 import { blogdata } from '@/app/api/blogdata'
 import { FaUser } from 'react-icons/fa'
-import Link from 'next/link'
-import { AiOutlineRight } from 'react-icons/ai'
 import MainLayout from '@/app/components/MainLayout'
 
-function page() {
+function Page() {
     const params = useParams()
     const { id } = params
     const data = blogdata.find((item) => item.id === Number(id))
@@ -62,4 +60,4 @@ function page() {
     )
 }
 
-export default page
+export default Page
