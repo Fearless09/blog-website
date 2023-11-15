@@ -14,10 +14,7 @@ function AuthLayout({ children }) {
 
     useEffect(() => {
         if (userAccount) {
-            console.log("User Account True")
             router.push('/')
-        } else {
-            console.log("User Account False")
         }
     }, [userAccount])
 
