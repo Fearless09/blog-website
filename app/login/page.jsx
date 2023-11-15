@@ -17,7 +17,7 @@ function Page() {
 
     return (
         <AuthLayout>
-            <h3 className='my-9 pb-9 text-center font-bold text-lg border-b-2'>Don't have an account? <Link href={'/signup'} className='text-[#0074E4]' >Sign up</Link></h3>
+            <h3 className='my-9 pb-9 text-center font-bold text-lg border-b-2'>Don&apos;t have an account? <Link href={'/signup'} className='text-[#0074E4]' >Sign up</Link></h3>
             {/* Sign in with Google btn */}
             <button
                 onClick={() => googleSignIn()}
