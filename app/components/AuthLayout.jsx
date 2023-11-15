@@ -12,7 +12,13 @@ function AuthLayout({ children }) {
         <div className="w-screen h-screen">
             <div className="h-screen lg:grid grid-cols-2">
                 <div className='hidden lg:block'>
-                    <Image src="/pexels.jpg" alt="" className='h-screen w-full object-cover' />
+                    <Image
+                        src="/pexels.jpg"
+                        width={1080}
+                        height={1350}
+                        alt=""
+                        className='h-screen w-full object-cover'
+                    />
                 </div>
                 <div className="overflow-x-hidden  overflow-y-auto flex flex-col relative p-4 h-full gap-4">
                     {/* Back Button Here */}
