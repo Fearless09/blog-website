@@ -29,7 +29,7 @@ function Pagination({ setDatas }) {
             <button
                 onClick={() => setCurrentPage(p => p - 1)}
                 disabled={currentPage === 1}
-                className='border border-[#29394E] rounded py-2 px-2 disabled:opacity-50'
+                className='border border-[#29394E] rounded py-2 px-2 disabled:opacity-50 disabled:cursor-not-allowed'
             >
                 <FaAnglesLeft />
             </button>
@@ -45,7 +45,7 @@ function Pagination({ setDatas }) {
             <button
                 onClick={() => setCurrentPage(p => p + 1)}
                 disabled={currentPage === totalPages}
-                className='border border-[#29394E] rounded py-2 px-2 disabled:opacity-50'
+                className='border border-[#29394E] rounded py-2 px-2 disabled:opacity-50 disabled:cursor-not-allowed'
             >
                 <FaAnglesRight />
             </button>

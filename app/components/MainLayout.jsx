@@ -5,6 +5,7 @@ import Navbar from './Navbar'
 import { BiSolidArrowToTop } from 'react-icons/bi'
 import NewLetter from './NewLetter';
 import SideBookMark from './SideBookMark';
+import Footer from './Footer';
 
 function MainLayout({ children }) {
     const [isTop, setIsTop] = useState(true);
@@ -45,7 +46,7 @@ function MainLayout({ children }) {
             >
                 <BiSolidArrowToTop size={24} />
             </button>
-
+            <Footer />
         </>
     )
 }

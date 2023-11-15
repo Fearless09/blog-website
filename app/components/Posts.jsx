@@ -33,7 +33,7 @@ function Posts({ datas }) {
     return (
         <div className="mt-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-14 justify-center">
             {datas?.map(({ id, image, tags, title, category, author, authorPic, published_date, reading_time, content }, index) => (
-                <div key={index}>
+                <div key={index} className='shadow-sm rounded-lg overflow-hidden pb-4'>
                     <div className='relative'>
                         <Image
                             src={image}
@@ -55,7 +55,7 @@ function Posts({ datas }) {
                             />
                         </button>
                     </div>
-                    <div className="mt-2 flex gap-2 items-center">
+                    <div className="mt-4 px-3 flex gap-2 items-center">
                         {tags?.map((tag, index) => (
                             <button key={index} className='border rounded-md px-3 py-1 border-[#29394E]'>
                                 {tag}
@@ -63,11 +63,11 @@ function Posts({ datas }) {
                         ))}
                         <span className='ms-2'>{reading_time}</span>
                     </div>
-                    <h1 className='mt-5 text-xl'>{title}</h1>
-                    <p className='mt-2'>{content}</p>
+                    <h1 className='mt-5 px-3 text-xl'>{title}</h1>
+                    <p className='mt-2 px-3'>{content}</p>
                     <Link
                         href={`post/${id}`}
-                        className='mt-3 font-bold flex items-center gap-2'
+                        className='mt-3 px-3 font-bold flex items-center gap-2'
                     >
                         <span>Read more</span>
                         <AiOutlineRight />
