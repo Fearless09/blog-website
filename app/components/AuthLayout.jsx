@@ -3,10 +3,23 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useContext, useEffect } from 'react'
 import { MdOutlineArrowBackIosNew } from 'react-icons/md'
+import { MyContext } from '../api/MyContext'
 
 function AuthLayout({ children }) {
     const router = useRouter()
+
+    const { userAccount } = useContext(MyContext)
+
+    useEffect(() => {
+        if (userAccount) {
+            console.log("User Account True")
+            router.push('/')
+        } else {
+            console.log("User Account False")
+        }
+    }, [userAccount])
 
     return (
         <div className="w-screen h-screen">

@@ -17,12 +17,12 @@ function Pagination({ setDatas }) {
         setEndIndex(currentPage * pageSize)
         setStartIndex((currentPage - 1) * pageSize)
         setDatas(blogdata.slice(startIndex, endIndex))
-    }, [currentPage, endIndex, startIndex])
 
-    // useEffect(() => {
-    //     setDatas(blogdata.slice(startIndex, endIndex))
-    //     // console.log(currentPage, startIndex, endIndex)
-    // }, [endIndex, startIndex])
+        window.scrollTo({
+            top: 0,
+            behavior: 'instant'
+        })
+    }, [currentPage, endIndex, startIndex])
 
     return (
         <div className='mt-5 flex justify-center items-center gap-3'>
@@ -33,14 +33,14 @@ function Pagination({ setDatas }) {
             >
                 <FaAnglesLeft />
             </button>
-            {Array.from({length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
-            <button
-                key={pageNumber}
-                onClick={() => setCurrentPage(pageNumber)}
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
+                <button
+                    key={pageNumber}
+                    onClick={() => setCurrentPage(pageNumber)}
                     className={currentPage === pageNumber ? "bg-[#29394E] text-white px-3 py-1 rounded" : ""}
-            >
-                {pageNumber}
-            </button>
+                >
+                    {pageNumber}
+                </button>
             ))}
             <button
                 onClick={() => setCurrentPage(p => p + 1)}
